@@ -16,11 +16,8 @@ spec:
     spec:
       hostNetwork: true
       nodeSelector:
-        beta.kubernetes.io/arch: amd64
-        beta.kubernetes.io/os: linux
-        kubernetes.io/arch: amd64
-        kubernetes.io/hostname: virtual-centos
-        kubernetes.io/os: linux
+        node-role.kubernetes.io/agent: ""
+        node-role.kubernetes.io/edge: ""
       containers:
       - name: echo-server
         image: jmalloc/echo-server
